@@ -1,12 +1,13 @@
 import { combineReducers } from "redux"
 
 const rootReducer = combineReducers({
-  authors: authorsReduceauthor: booksReducer 
+  authors: authorsReducer, 
+  books: booksReducer 
 })
 
 export default rootReducer
 
-export default function booksReducer(state = [],action) {
+function booksReducer(state = [],action) {
   let idx;
   switch (action.type) {
     case "ADD_BOOK":
@@ -22,7 +23,7 @@ export default function booksReducer(state = [],action) {
   }
 }
 
-export default function authorsReducer(state = [],action) {
+function authorsReducer(state = [],action) {
   let idx;
   switch (action.type) {
     case "ADD_AUTHOR":
